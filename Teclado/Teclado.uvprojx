@@ -406,7 +406,7 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>Teclado</GroupName>
+          <GroupName>Aula</GroupName>
           <Files>
             <File>
               <FileName>Teclado.c</FileName>

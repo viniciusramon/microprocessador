@@ -1,6 +1,7 @@
 /*----------------------------------------------------------------------------
-		SYSTICK
+		AULA 05/05 - SYSTICK
 
+AUTOR:  Vinicius Ramon					DATA:	05/05/2015						VERSAO: 1.0
 
 *----------------------------------------------------------------------------*/
 
@@ -13,9 +14,9 @@
 		Defines
  *----------------------------------------------------------------------------*/
 
-#define GrupoN	(1UL << 12) // Habilita o grupo das portas N
+#define GrupoN	(1UL << 12)
 
-#define PN1			(1UL << 1) // Habilita a porta PN1
+#define PN1			(1UL << 1)
 
 
 /*----------------------------------------------------------------------------
@@ -25,7 +26,7 @@
 /*----------------------------------------------------------------------------
     Functions
  *----------------------------------------------------------------------------*/
-void SysTick_Handler()
+void SysTick_Handle()
 {
 			TimerUp++;
 }
@@ -45,9 +46,6 @@ int main()
 		GPION->DEN	 |= PN1;  /* habilita o pino */ 	
 
 		GPION->DATA &= ~PN1;	// resetar Led 1
-	
-		SystemCoreClockUpdate();
-		SysTick_Config(SystemCoreClock/10000);
 		
 		TimerUp = 0;
 		/*********************** CYCLIC ***********************/
@@ -62,8 +60,7 @@ int main()
 						else
 						{
 							GPION->DATA |= PN1;
-					}
-						TimerUp = 0;
+						}
 				}
 		} // while(1)
 }

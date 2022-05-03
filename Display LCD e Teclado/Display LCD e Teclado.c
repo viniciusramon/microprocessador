@@ -1,5 +1,7 @@
 /*----------------------------------------------------------------------------
-		DISPLAY LCD E TECLADO
+		AULA 16/05 - DISPLAY LCD E TECLADO
+
+AUTOR:  Vinicius Ramon					DATA:	16/05/2015						VERSAO: 1.1
 
 *----------------------------------------------------------------------------*/
 
@@ -302,6 +304,7 @@ int main()
 							Enable();
 
 						GPIOB_AHB->DATA |= PB5; // COLOCA RS=1
+
 
 						}
 						

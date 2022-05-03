@@ -1,5 +1,7 @@
 /*----------------------------------------------------------------------------
-		TECLADO
+		AULA 24/04 - TECLADO
+
+AUTOR: 										DATA:							VERSAO: 
 
 *----------------------------------------------------------------------------*/
 
@@ -65,7 +67,7 @@ int main()
 		GPIOL->DIR   		 &= ~(PL0 | PL1 | PL4 | PL5);	/* PL0, PL1, PL4, PL5 is intput        */
 		GPIOL->DEN   		 |=  (PL0 | PL1 | PL4 | PL5);	/* PL0, PL1, PL4, PL5 is digital func. */	
 
-		Tecla = '0';		// ? = nenhuma tecla pressionada 
+		Tecla = '?';		// ? = nenhuma tecla pressionada 
 
 		GPIOG_AHB->DATA &= ~PG0;	// resetar coluna 1
 		GPIOF_AHB->DATA &= ~PF3;	// resetar coluna 2
